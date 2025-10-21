@@ -1,0 +1,55 @@
+winappdriver:
+  # WinAppDriver server URL
+  server_url: "http://127.0.0.1:4723"
+  
+  # Implicit wait time (seconds)
+  implicit_wait: 10
+  
+  # Connection timeout (seconds)
+  connection_timeout: 30
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Log format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Log file
+  file: "logs/automation.log"
+
+screenshots:
+  # Enable screenshots
+  enabled: true
+  
+  # Take screenshot on error
+  on_error: true
+  
+  # Screenshots directory
+  directory: "screenshots"
+
+reporting:
+  # Report format: html, json, text
+  format: "html"
+  
+  # Reports directory
+  directory: "reports"
+
+# Element wait settings
+element_wait:
+  # Default timeout for finding elements (seconds)
+  timeout: 10
+  
+  # Poll frequency (seconds)
+  poll_frequency: 0.5
+
+# Execution settings
+execution:
+  # Continue execution on step failure
+  continue_on_error: false
+  
+  # Take screenshot before each action (for debugging)
+  screenshot_before_action: false
+  
+  # Take screenshot after each action (for debugging)
+  screenshot_after_action: false

@@ -1,0 +1,27 @@
+name: "Notepad Test - Text Entry"
+description: "Test text entry in Notepad application"
+app:
+  path: "C:\\Windows\\System32\\notepad.exe"
+  arguments: ""
+
+steps:
+  # Wait for app to load
+  - action: "wait"
+    duration: 2
+  
+  # Find text editor and enter text
+  - action: "send_keys"
+    element:
+      type: "ClassName"
+      value: "Edit"
+    keys: "Hello, WinAppDriver!\nThis is an automated test.\nTesting line 3..."
+  
+  - action: "wait"
+    duration: 1
+  
+  # Take screenshot
+  - action: "screenshot"
+    filename: "notepad_text_entry.png"
+  
+  # Note: Notepad will show "Do you want to save?" dialog on close
+  # This is expected behavior

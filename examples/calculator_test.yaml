@@ -1,0 +1,70 @@
+name: "Calculator Test - Basic Operations"
+description: "Test basic calculator arithmetic operations"
+app:
+  path: "C:\\Windows\\System32\\calc.exe"
+  arguments: ""
+
+steps:
+  # Wait for app to fully load
+  - action: "wait"
+    duration: 2
+  
+  # Test: 1 + 2 = 3
+  - action: "click"
+    element:
+      type: "Name"
+      value: "One"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Plus"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Two"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  # Take screenshot of result
+  - action: "screenshot"
+    filename: "calculator_addition_result.png"
+  
+  # Clear and test: 5 * 3 = 15
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Clear"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Five"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Multiply by"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Three"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "calculator_multiply_result.png"
