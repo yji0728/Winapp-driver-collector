@@ -1,0 +1,200 @@
+name: "Advanced Calculator Test"
+description: "Advanced test demonstrating multiple operations and verifications"
+app:
+  path: "C:\\Windows\\System32\\calc.exe"
+  arguments: ""
+
+steps:
+  # Wait for calculator to fully load
+  - action: "wait"
+    duration: 2
+  
+  # Test 1: Addition (15 + 27 = 42)
+  - action: "click"
+    element:
+      type: "Name"
+      value: "One"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Five"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Plus"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Two"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Seven"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "test1_addition.png"
+  
+  # Test 2: Subtraction (50 - 8 = 42)
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Clear"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Five"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Zero"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Minus"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Eight"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "test2_subtraction.png"
+  
+  # Test 3: Multiplication (6 * 7 = 42)
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Clear"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Six"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Multiply by"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Seven"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "test3_multiplication.png"
+  
+  # Test 4: Division (84 / 2 = 42)
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Clear"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Eight"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Four"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Divide by"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Two"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "test4_division.png"
+  
+  # Test 5: Complex operation (10 + 20 * 2 - 8 / 2)
+  # Note: Calculator follows order of operations
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Clear"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "One"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Zero"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Plus"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Two"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Zero"
+  
+  - action: "click"
+    element:
+      type: "Name"
+      value: "Equals"
+  
+  - action: "wait"
+    duration: 1
+  
+  - action: "screenshot"
+    filename: "test5_complex.png"
+  
+  # Final screenshot
+  - action: "screenshot"
+    filename: "final_result.png"

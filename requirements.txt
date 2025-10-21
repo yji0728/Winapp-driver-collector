@@ -1,0 +1,15 @@
+# WinAppDriver Automation Framework Requirements
+
+# Core dependencies
+Appium-Python-Client>=2.9.0
+selenium>=4.0.0
+
+# CLI dependencies
+click>=8.0.0
+PyYAML>=6.0
+
+# GUI dependencies (Tkinter is included with Python)
+
+# Optional dependencies for testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
